@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NotOrtama {
+public class NotOrtalama {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         float mat,fiz,kim,tur,tar,muz,sonuc;
