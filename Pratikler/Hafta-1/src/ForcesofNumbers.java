@@ -6,7 +6,7 @@ public class ForcesofNumbers {
         Scanner input=new Scanner(System.in);
         System.out.println("Sayı giriniz:");
         n=input.nextInt();
-        System.out.println("4 sayısının kuvvetleri"100);
+        System.out.println("4 sayısının kuvvetleri");
         for(int i=1; i<=n;i*=4){
             System.out.println(+i);
 
