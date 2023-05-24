@@ -7,21 +7,23 @@ public class MinMaxSearch {
         System.out.print("Kaç tane sayı gireceksiniz : ");
         int piece = input.nextInt();
 
-        int minValue = Integer.MAX_VALUE;
-        int maxValue = Integer.MIN_VALUE;
+        int minValue = Integer.MAX_VALUE; // Başlangıçta en büyük değer atanmalı
+        int maxValue = Integer.MIN_VALUE; // Başlangıçta en küçük değer atanmalı
 
         for(int i=1;i<=piece;i++){
             System.out.print(i+". Sayınızı giriniz: ");
-            int sayi = input.nextByte();
-            if(sayi > maxValue){
-                maxValue =sayi;
+            int num = input.nextByte();
+            // maxValue ilk olarak -2147483648 başlar
+            if(num > maxValue){
+                maxValue =num;
             }
-            if(sayi< minValue){
-                minValue =sayi;
+            // minValue ilk olarak 2147483648 başlar
+            if(num< minValue){
+                minValue =num;
             }
 
         }
-        System.out.print("En büyük sayınız: " + maxValue + "\nEn küçük sayınız: "+minValue);
+        System.out.print("En büyük nız: "  + maxValue + "\nEn küçük sayınız: " +minValue);
 
 
 
