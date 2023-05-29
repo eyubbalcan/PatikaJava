@@ -13,7 +13,7 @@ public class InvertedTriangle {
                 System.out.print(" ");
             }
             // Yıldızları düzenlemek için döngü
-            for (int j = 1; j <= (2 * i) - 1; j++) {
+            for (int j = 1; j <= (2*i)-1 ; j++) {
                 System.out.print("*");
 
             }
