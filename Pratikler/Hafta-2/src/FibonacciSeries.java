@@ -1,10 +1,11 @@
 public class FibonacciSeries {
-    static int fib(int n){
-        if(n == 1  || n==2)
+    static int fib(int num){
+        //
+        if(num == 1  || num==2)
         return 1;
         else {
-            System.out.print(n+" ");
-            int i = fib(n - 1) + fib(n - 2);
+            System.out.print(num+" ");
+            int i = fib(num - 1) + fib(num - 2);
             return i;
 
         }
