@@ -12,50 +12,45 @@ public class Emplooyee {
         this.workHours=workHours;
         this.hireYear= hireYear;
     }
-    int tax(Emplooyee salary){
+     double tax(){//Vergi dilimi hesaplanması yapılıyor
         if(this.salary < 1000){
-           return this.salary = this.salary;
+           return 0;
         }else {
-            int tax =(this.salary /100)*3;
-            return  this.salary = this.salary-tax;
+            return salary*0.03;
         }
 
     }
-    int bonus(Emplooyee workHours){
-        int bonus=1;
-        if(this.workHours >= 40){
-            this.workHours = this.workHours - 40;
-            return bonus = this.workHours*30;
-        }
+    double bonus(){//Çalışma saatine  göre prim hesaplanıyor
+
+        if(this.workHours > 40){
+            int extraHours=workHours-40;
+            return extraHours*30;
+        }else {
         return 0;
+        }
     }
-    int raise = 2021-this.hireYear;
-    int raiseSalary(Emplooyee hireYear){
-        int raise = 2021-this.hireYear;
-        int interestValue = this.salary /100;
+
+    void raiseSalary(){//Burada yıla göre maaş zam oranı hesaplanıyor
+
+        int raise = 2021-hireYear;
+
         if(raise>10){
-            return this.salary += interestValue * 5;
+            salary*=1.05;
+        } else if (raise>=9&&raise<20) {
+            salary*=1.1;
+        }else {
+            salary*=1.15;
         }
-        if(raise>=9&&raise<20){
-            return this.salary += interestValue *10;
-        }
-        if(raise>=19){
-            return this.salary += interestValue *15;
-        }
-        return 0;
+
+
     }
 
-    void toString(Emplooyee bilgi){
-        System.out.println("Adı :" + this.name);
-        System.out.println("Maaşı  :" + this.salary);
-        System.out.println("Çalışma Saati :" + this.workHours);
-        System.out.println("Başlangıç Yılı :" + raise);
-        System.out.println("Vergi :" + this.name);
-        System.out.println("Bonus  :" + this.name);
-        System.out.println("Maaş Artışı :" + raiseSalary(this.hireYear));
-        System.out.println("Vergi ve Bonuslar ile birlikte maaş :" + this.name);
-        System.out.println("Toplam Maaş :" + this.name);
-
-
+    public String toString(){//Burada ekrana aktarım için method kullanılıyor
+        return " \n Adı: " + name + "\n " +
+                "Başlangıç Yılı: " + hireYear+"\n " +
+                "Haftalık Çalışma Saati: " + workHours +"\n " +
+                "Vergi:"+tax()+"\n " +
+                "Bonus:" +bonus()+
+                "\n Maaşı: " + salary ;
     }
 }
