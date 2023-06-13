@@ -1,17 +1,44 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Random rand = new Random();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Scanner input = new Scanner(System.in);
+        int number = rand.nextInt(100);
+        int right = 0;
+        int[] wrong =new int[5];
+        boolean isWin = false;
+        boolean i
+        while (right < 5) {
+            System.out.println("Lütfen tahmininizi giririnz.");
+            int value = input.nextInt();
+            if (value < 0 || value > 100) {
+                System.out.println("0-100 arası bir sayı giriniz.");
+                continue;
+            }
+            if (value == number) {
+                System.out.println("Tebrikler bildiniz.");
+                break;
+            } else {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+                System.out.println("Malesef yanlış, sayı : " + number);
+                if(value > number) System.out.println(value + "sayısı, gizli sayıdan büyüktür.");
+                else System.out.println(value + "sayısı, gizli sayıdan küçüktür.");
+                wrong[right]= value;
+                right ++;
+
+                System.out.println("Kalan hakkı : " + (5-right));
+            }
         }
+
+        if(!isWin){
+            System.out.println("Kaybettiniz");
+            System.out.println("Tahminleriniz : " + Arrays.toString(wrong));
+        }
+
     }
 }

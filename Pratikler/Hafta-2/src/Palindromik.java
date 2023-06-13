@@ -14,6 +14,6 @@ public class Palindromik {
         return true;
     }
     public static void main(String[] args) {
-        System.out.println(isPalindrom("kayak"));
+        System.out.println(isPalindrome("kayak"));
     }
 }
