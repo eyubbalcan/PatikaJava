@@ -12,7 +12,6 @@ public class Main {
         int right = 0;
         int[] wrong =new int[5];
         boolean isWin = false;
-        boolean i
         while (right < 5) {
             System.out.println("Lütfen tahmininizi giririnz.");
             int value = input.nextInt();
