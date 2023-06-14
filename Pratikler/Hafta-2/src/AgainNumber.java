@@ -7,7 +7,7 @@ public class AgainNumber {
         int[] number = new int[list.length];
         int[] againnumber = new int[list.length];
         int sayac = 0;
-        System.out.println("Dizi : " + Arrays.toString(list));
+        System.out.print("Dizi : " + Arrays.toString(list));
         System.out.println("Tekrar Sayıları");
         for (int i = 0; i < list.length; i++) {
             int num = list[i];
